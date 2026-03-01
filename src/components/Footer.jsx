@@ -1,21 +1,15 @@
 import React from 'react';
+import logo from '../images/logo.svg';
 
 const Footer = () => {
   return (
     <footer className="w-full border-t border-white/10 bg-white/5 backdrop-blur-md py-8 mt-24">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
         
-        {/* Sol Kısım: Logo / İsim */}
-        <div className="flex flex-col items-center md:items-start">
-          <span className="text-xl font-bold tracking-wider text-white">
-            &lt;Aybüke /&gt;
-          </span>
-          <span className="text-sm text-gray-400 mt-1">
-            Software Engineer
-          </span>
+        <div className="flex w-50">
+         <img src={logo} alt="" />
         </div>
 
-        {/* Orta Kısım: Telif Hakkı ve İlham Mesajı */}
         <div className="text-center text-sm text-gray-400">
           <p>&copy; {new Date().getFullYear()} Tüm hakları saklıdır.</p>
           <p className="mt-1 text-xs opacity-70">
@@ -23,11 +17,10 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Sağ Kısım: Sosyal Medya İkonları */}
         <div className="flex items-center space-x-5">
           {/* GitHub */}
           <a 
-            href="https://github.com/aybuke" 
+            href="https://github.com/aybukzrn" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white hover:-translate-y-1 transition-all duration-300"
@@ -40,7 +33,7 @@ const Footer = () => {
 
           {/* LinkedIn */}
           <a 
-            href="https://linkedin.com/in/aybuke" 
+            href="https://www.linkedin.com/in/ayb%C3%BCke-zeren/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-[#0a66c2] hover:-translate-y-1 transition-all duration-300"
@@ -53,7 +46,7 @@ const Footer = () => {
 
           {/* Email */}
           <a 
-            href="mailto:merhaba@aybuke.com" 
+            href="mailto:aybukezrn@gmail.com" 
             className="text-gray-400 hover:text-pink-400 hover:-translate-y-1 transition-all duration-300"
             aria-label="Email"
           >

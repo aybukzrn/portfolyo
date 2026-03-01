@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-const STATIC_STARS = 42;
+const STATIC_STARS = 82;
 const LAYERS = [
   { count: 80, rMin: 0.4, rMax: 1.0, speedMin: 0.12, speedMax: 0.28 },
   { count: 40, rMin: 1.0, rMax: 2.0, speedMin: 0.06, speedMax: 0.14 },
@@ -135,10 +135,10 @@ export default function StarField({ children }) {
       className="relative w-full min-h-screen overflow-hidden"
       style={{ background: "radial-gradient(ellipse at bottom, #412B6B 10%, #FFD3D5 100%)" }}
     >
-      {/* Sabit & twinkle yıldızlar */}
+      {/* Sabit & twinkle yıldızlar (ekran boyutuna sabit, sayfa uzasa da büyümez) */}
       <canvas
         ref={staticRef}
-        className="absolute inset-0 w-full h-full pointer-events-none"
+        className="fixed inset-0 w-full h-full pointer-events-none"
         style={{
           transform: `translate3d(${-parallax.x * 10}px, ${-parallax.y * 10}px, 0)`,
         }}
@@ -147,7 +147,7 @@ export default function StarField({ children }) {
       {/* Yüzen yıldızlar */}
       <canvas
         ref={floatRef}
-        className="absolute inset-0 w-full h-full pointer-events-none"
+        className="fixed inset-0 w-full h-full pointer-events-none"
         style={{
           transform: `translate3d(${-parallax.x * 20}px, ${-parallax.y * 20}px, 0)`,
         }}
